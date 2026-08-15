@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Surya's Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 18px 8%;
+
+            background: #020617;
+        }
+
+        nav h2 {
+            color: #38bdf8;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 90vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            padding: 30px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .hero span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 14px 30px;
+
+            background: #38bdf8;
+            color: #020617;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background: #0ea5e9;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 45px;
+        }
+
+        /* ABOUT */
+
+        .about {
+            max-width: 800px;
+            margin: auto;
+
+            text-align: center;
+
+            color: #cbd5e1;
+
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* SERVICES */
+
+        .cards {
+            display: flex;
+            justify-content: center;
+
+            gap: 25px;
+
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 280px;
+
+            padding: 30px;
+
+            background: #1e293b;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+
+            padding: 15px;
+
+            margin-bottom: 15px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #1e293b;
+
+            color: white;
+
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+
+            padding: 15px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #38bdf8;
+
+            color: #020617;
+
+            font-size: 17px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0ea5e9;
+        }
+
+        #message {
+            text-align: center;
+            margin-top: 15px;
+            color: #4ade80;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 30px;
+
+            background: #020617;
+
+            text-align: center;
+
+            color: #94a3b8;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .title {
+                font-size: 32px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <h2>MyWebsite</h2>
+
+    <ul>
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#services">Services</a>
+        </li>
+
+        <li>
+            <a href="#projects">Projects</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+    <div>
+
+        <h1>
+            Welcome to <span>Surya's Website</span>
+        </h1>
+
+        <p>
+            I create modern, beautiful and responsive websites.
+        </p>
+
+        <a href="#services" class="btn">
+            Explore Website
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h2 class="title">
+        About Me
+    </h2>
+
+    <p class="about">
+
+        Hello! Welcome to Surya's website.
+        I am interested in web development,
+        programming and creating awesome
+        digital projects.
+
+        This website is completely created
+        using HTML, CSS and JavaScript.
+
+    </p>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+    <h2 class="title">
+        My Services
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>🌐 Web Design</h3>
+
+            <p>
+                Modern and responsive website
+                designs for desktop and mobile.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>💻 Web Development</h3>
+
+            <p>
+                Interactive websites using
+                HTML, CSS and JavaScript.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🎮 Game Development</h3>
+
+            <p>
+                Fun browser games and
+                interactive JavaScript projects.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <h2 class="title">
+        My Projects
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>🏎️ Car Racing Game</h3>
+
+            <p>
+                A browser-based car racing game.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🧮 Calculator</h3>
+
+            <p>
+                A useful calculator made with
+                JavaScript.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🎨 Portfolio</h3>
+
+            <p>
+                A modern personal portfolio website.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <h2 class="title">
+        Contact Me
+    </h2>
+
+    <div class="contact">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Your Name"
+        >
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Your Email"
+        >
+
+        <textarea
+            id="text"
+            placeholder="Write your message..."
+        ></textarea>
+
+        <button onclick="sendMessage()">
+            Send Message
+        </button>
+
+        <div id="message"></div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Surya'sWebsite | Made with HTML, CSS & JavaScript
+    </p>
+
+</footer>
+
+
+<script>
+
+function sendMessage() {
+
+    let name =
+        document.getElementById("name").value;
+
+    let email =
+        document.getElementById("email").value;
+
+    let text =
+        document.getElementById("text").value;
+
+
+    if (
+        name === "" ||
+        email === "" ||
+        text === ""
+    ) {
+
+        document.getElementById("message").style.color =
+            "#f87171";
+
+        document.getElementById("message").innerHTML =
+            "⚠️ Please fill in all fields.";
+
+        return;
+    }
+
+
+    document.getElementById("message").style.color =
+        "#4ade80";
+
+    document.getElementById("message").innerHTML =
+        "✅ Thank you, " + name + "! Your message has been received.";
+
+}
+
+</script>
+
+
+</body>
+</html>
